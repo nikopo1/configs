@@ -91,6 +91,7 @@ alias la='ls -A'
 #alias l='ls -CF'
 alias go='gnome-open'
 alias vi='vi -O'
+alias gitl='git log --graph --decorate --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 
 # convenience aliases for working with clipboard
 alias pbcopy='xclip -selection clipboard'
