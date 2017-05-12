@@ -103,6 +103,13 @@ stty -ixon
 # Don't store duplicates in bash
 export HISTCONTROL=ignoreboth:erasedups
 
+# Export CCACHE if present
+CCACHEDIR=/usr/lib/ccache
+
+if [ -d  "$CCACHEDIR" ]; then
+    export PATH="$CCACHEDIR:$PATH"
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
