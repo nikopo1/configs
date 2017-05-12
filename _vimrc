@@ -140,8 +140,8 @@ set tabpagemax=20
 " mark tabs and spaces
 set list listchars=tab:»\ ,trail:·,extends:»,precedes:«
 
-" display 100 characters color column
-set colorcolumn=100
+" display 80 characters color column
+set colorcolumn=80
 
 " }}}
 " Editing {{{
@@ -308,15 +308,15 @@ nnoremap <Tab> :cn<CR>
 
 " per-filetype settings
 autocmd FileType java		setlocal tw=78 cin foldmethod=marker
-autocmd FileType c,cpp		setlocal tw=98 cindent expandtab tabstop=4 shiftwidth=4
-autocmd FileType lex,yacc	setlocal tw=98 cindent expandtab tabstop=4 shiftwidth=4
+autocmd FileType c,cpp		setlocal tw=78 cindent expandtab tabstop=4 shiftwidth=4
+autocmd FileType lex,yacc	setlocal tw=78 cindent expandtab tabstop=4 shiftwidth=4
 autocmd FileType python		setlocal autoindent expandtab sts=4 sw=4 tw=98
-autocmd FileType haskell	setlocal tw=72 sw=2 sts=2 et
-autocmd FileType tex		setlocal tw=72 sw=2 sts=2 ai et
-autocmd FileType markdown	setlocal tw=72 sw=2 sts=2 ai et
+autocmd FileType haskell	setlocal tw=78 sw=2 sts=2 et
+autocmd FileType tex		setlocal tw=78 sw=2 sts=2 ai et
+autocmd FileType markdown	setlocal tw=78 sw=2 sts=2 ai et
 " 'linebreak' won't work without 'nolist'
 autocmd FileType creole		setlocal tw=0 fo=t wrap nolist linebreak
-autocmd FileType mail		setlocal tw=72 fo=tql
+autocmd FileType mail		setlocal tw=78 fo=tql
 autocmd FileType lua		setlocal sts=4 sw=4 ai et
 
 " Custom filetypes per extension. Not sure this is the recommended way to do it.
