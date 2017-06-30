@@ -309,6 +309,27 @@ nnoremap <S-F9> :ccl<CR>
 nnoremap <S-Tab> :cp<CR>
 nnoremap <Tab> :cn<CR>
 
+" Command to rebuild cscope database and reinitialize the connection to it.
+command Cscope silent call s:rebuild_cscope()
+function s:rebuild_cscope()
+    !cscope -Rb
+
+    redir => s:cs_connections
+    silent cs show
+    redir END
+
+    let s:cs_connections = substitute(s:cs_connections, "^[ \t\n]*", "", "g")
+    let s:cs_connections = substitute(s:cs_connections, "[ \t\n]*$", "", "g")
+
+    if s:cs_connections ==? "no cscope connections"
+        " Add connection
+        silent cs add cscope.out
+    else
+        " Reset connection
+        silent cs reset
+    endif
+endfunction
+
 " }}}
 " Filetypes {{{
 
