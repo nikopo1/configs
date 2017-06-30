@@ -69,6 +69,12 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 
 " }}}
+" Global configurations {{{
+
+" Enable loading local .vimrc files from the current directory
+set exrc
+
+" }}}
 " Visual {{{
 
 " enable syntax highlighting
