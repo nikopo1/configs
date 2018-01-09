@@ -232,7 +232,7 @@ map <leader>b :Gblame<CR>
 map <leader>m :make<CR>
 vmap <leader>{ [{
 vmap <leader>} ]}
-
+nnoremap <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " }}}
 " Editor-specific {{{
